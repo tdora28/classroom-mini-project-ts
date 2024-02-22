@@ -25,4 +25,8 @@ export function getFailingGrades(grades: number[]): string {
   return failingGrades.join(', ');
 }
 
-export function getRaisedGrades(grades) {}
+// `getRaisedGrades` should return all the grades raised by 1 (grades should not exceed 20)
+export function getRaisedGrades(grades: number[]): string {
+  const raisedGrades = grades.map((grade) => (grade + 1 > 20 ? 20 : grade + 1));
+  return raisedGrades.join(', ');
+}

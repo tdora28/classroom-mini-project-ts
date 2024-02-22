@@ -19,6 +19,10 @@ export function getPassingGrades(grades: number[]): string {
   return passingGrades.join(', ');
 }
 
-export function getFailingGrades(grades) {}
+// `getFailingGrades` should return all failing grades (9 and below)
+export function getFailingGrades(grades: number[]): string {
+  const failingGrades = grades.filter((grade) => grade <= 9);
+  return failingGrades.join(', ');
+}
 
 export function getRaisedGrades(grades) {}

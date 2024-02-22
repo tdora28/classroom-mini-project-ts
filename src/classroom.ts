@@ -8,7 +8,10 @@ export function getSumGrades(grades: number[]): number {
   return grades.reduce((acc, curr) => acc + curr, 0);
 }
 
-export function getAverageValue(grades) {}
+// `getAverageValue` should return the average value of all grades (the sum of all grades divided by the total number of grades)
+export function getAverageValue(grades: number[]) {
+  return getSumGrades(grades) / grades.length;
+}
 
 export function getPassingGrades(grades) {}
 

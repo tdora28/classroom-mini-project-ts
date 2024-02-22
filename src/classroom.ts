@@ -9,11 +9,15 @@ export function getSumGrades(grades: number[]): number {
 }
 
 // `getAverageValue` should return the average value of all grades (the sum of all grades divided by the total number of grades)
-export function getAverageValue(grades: number[]) {
+export function getAverageValue(grades: number[]): number {
   return getSumGrades(grades) / grades.length;
 }
 
-export function getPassingGrades(grades) {}
+// `getPassingGrades` should return all passing grades (10 and above)
+export function getPassingGrades(grades: number[]): string {
+  const passingGrades = grades.filter((grade) => grade >= 10);
+  return passingGrades.join(', ');
+}
 
 export function getFailingGrades(grades) {}
 
